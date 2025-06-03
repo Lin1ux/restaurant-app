@@ -59,6 +59,50 @@
   color: #2c3e50;
 }
 
+.search-bar {
+  display: flex;
+  justify-content: center; /* środek poziomo */
+  margin: 20px 0; /* odstęp od listy */
+}
+
+.search-bar input {
+  width: 300px;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  transition: border-color 0.3s;
+}
+
+.search-bar input:focus {
+  border-color: #007BFF; /* niebieska obwódka po kliknięciu */
+  outline: none;
+}
+
+.search-bar select {
+  width: 200px;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  transition: border-color 0.3s;
+  margin-left: 10px; /* odstęp między input a select */
+  background-color: #fff;
+  color: #333;
+  cursor: pointer;
+}
+
+.search-bar select:focus {
+  border-color: #007BFF;
+  outline: none;
+}
+
+.restaurant-link {
+  text-decoration: none; /* usuwa podkreślenie */
+  color: inherit;         /* dziedziczy kolor tekstu z rodzica */
+  display: block;         /* pozwala objąć cały blok div */
+}
+
 .red {
     background-color: red;
 }

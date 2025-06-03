@@ -1,9 +1,15 @@
 import { Routes } from '@angular/router';
-import { RestaurantListComponent } from './components/restaurant-list-component/restaurant-list-component.component';
+import { RestaurantListComponent } from './components/restaurant-list/restaurant-list.component';
+import { RestaurantInfoComponent } from './components/restaurant-info/restaurant-info.component';
+
 
 export const routes: Routes = [
     {
-        path: ' ',
+        path: '',
         component: RestaurantListComponent
-    }
+    },
+    {
+    path: 'restaurant/:id',
+    component: RestaurantInfoComponent
+  }
 ];

@@ -1,0 +1,13 @@
+<div *ngIf="restaurant" class="restaurant-detail">
+  <div class = "restaurant-info">
+        <h2>{{ restaurant.title }}</h2>
+        <p><strong>Rodzaj serwowanego menu:</strong> {{ restaurant.type }}</p>
+        <p><strong>Adres:</strong> {{ restaurant.address }}, {{ restaurant.town }}</p>
+        <p><strong>Godziny otwarcia:</strong> {{ restaurant.openHours | date:'HH:mm' }} - {{ restaurant.closeHours | date:'HH:mm' }}</p>
+        <p><strong>Średnia ocena:</strong> {{ restaurant.GetAvarage() }}</p>
+    </div>
+    <h3>Komentarze</h3>
+    <div class="comment" *ngFor="let comment of restaurant.comments">
+        <p><strong>{{ comment.author }}</strong>: {{ comment.message }} <span class="grade">({{ comment.grade }}/5)</span></p>
+    </div>
+</div>

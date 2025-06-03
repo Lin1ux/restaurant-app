@@ -1,0 +1,58 @@
+.restaurant-detail {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #fdfdfd;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.restaurant-detail h2 {
+  margin-bottom: 10px;
+  color: #333;
+  font-size: 32px;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 8px;
+}
+
+.restaurant-detail p {
+  font-size: 16px;
+  margin: 10px 0;
+  color: #444;
+}
+
+.restaurant-detail h3 {
+  margin-top: 30px;
+  font-size: 24px;
+  color: #555;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 6px;
+}
+
+.comment {
+  padding: 10px;
+  margin-bottom: 15px;
+  border-left: 4px solid #007BFF;
+  background-color: #f5f8ff;
+  border-radius: 6px;
+}
+
+.comment p {
+  margin: 0;
+  color: #333;
+}
+
+.comment .grade {
+  color: #888;
+  font-style: italic;
+}
+
+.restaurant-info {
+  background-color: #fff;
+  padding: 25px;
+  margin-bottom: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3); /* Cień nadający głębię */
+  transition: box-shadow 0.3s ease;
+}

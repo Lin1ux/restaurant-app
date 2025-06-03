@@ -1,0 +1,43 @@
+<div class = "container">
+    
+    <div class = "restaurant-container"> 
+        <h1>Lista Restauracji</h1>
+    </div>
+    <div class="search-bar">
+        <input type="text" placeholder="Szukaj po nazwie..." [(ngModel)]="searchTerm" />
+        <select [(ngModel)]="sortOrder">
+            <option value="A-Z">Nazwa A-Z</option>
+            <option value="Z-A">Nazwa Z-A</option>
+            <option value="grade">Ocena</option>
+        </select>
+    </div>
+    <div class="search-bar">
+        <input type="text" placeholder="Szukaj po lokalizacji..." [(ngModel)]="localizationSearchTerm" />
+        <select [(ngModel)]="menuTypeFilter">
+            <option value="">Wszystko</option>
+            <option value="menu degustacyjne">Menu degustacyjne</option>
+            <option value="menu dnia">Menu dnia</option>
+            <option value="bufet">Bufet</option>
+            <option value="fast food">Fast food</option>
+            <option value="bar">Bar</option>
+            <option value="wegańskie">Wegańskie</option>
+            <option value="wegetariańskie">Wegetariańskie</option>
+            <option value="menu sezonowe">Menu sezonowe</option>
+        </select>
+    </div>
+
+    <div class = "restaurant-item" *ngFor="let restaurant of filteredRestaurants">
+        <a class="restaurant-link" [routerLink]="['/restaurant', restaurant.id]">
+            <div class = "restaurant-row">
+                <div>
+                    <h3>{{restaurant.title}}</h3>
+                    <p>Godziny otwarcia: {{restaurant.openHours | date:'HH:mm' }}-{{restaurant.closeHours | date:'HH:mm'}}</p>
+                    <p>Miasto: {{restaurant.town}}</p>
+                </div>
+                <div class = "grade">
+                    <p>Ocena: {{restaurant.GetAvarage()}}</p>
+                </div>
+            </div>
+        </a>
+    </div>
+</div>
